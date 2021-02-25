@@ -1,0 +1,534 @@
+@charset "UTF-8";
+@import "grid.css";
+/*  default style */
+body,header,div,h1,h2,h3,button,nav,form,input, footer,p,address,section,video,ul,li,ol{
+	display:block;  margin:0px;  padding:0px;
+}
+ol,ul{  list-style:none; }
+img{  border:0px none; }
+a{  text-decoration:none;  color:#000; }
+address{  font-style:normal;  }
+/*  default style */
+/* layout style */
+body{
+	font-family: "NanumGothic",sans-serif;
+	font-size:12px;
+}
+#popup{
+	width:450px;  height:570px;
+	position:absolute;  left:20px;  top:70px;
+	z-index:200;
+}
+#popup input{  display:inline-block; }
+.btn_pop_close{
+    color: #000;
+    background: #fff;
+    font-weight: bold;
+}
+#header{
+	width:100%;  height:60px;
+/*
+	border-top:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+*/
+	position:fixed;  left:0px;  top:0px;
+	z-index:100;   background:#fff;
+}
+#header>#header_box{
+    width: 1100px;
+	margin:0 auto;   position:relative;
+	height:60px;
+}
+#header>#header_box>h1{
+	width:97px;  height:55px;  float:left; margin-top: 2px;
+}
+#header>#header_box>#togglebtn{
+	width:30px;  height:30px;
+	float:right;  margin-top:10px;
+	background:#c3c3c3;
+	border:0px none;
+	/*background:transparent; */
+	display:none;   /* media query  */
+}
+#header>#header_box>#searchbtn{
+	width:50px;  height:25px;
+	position:absolute;  display:block;
+	border:0px none;    top:14px;
+	right:-20px; /* media query  */
+    font-size: 14px; color:#fff; background:#0f4c82;
+}
+
+#header>#header_box>.gnbwrap>#gnb1{
+	width:220px;  height:22px;
+	background:#fff;
+	position:absolute;  top:14px;
+	right:32px;
+    border: 2px solid #0f4c82
+}
+#header>#header_box>.gnbwrap>#gnb2{
+	width:800px;   height:50px;
+	position:absolute;
+	left:150px;   top:0px;
+}
+
+#header>#header_box>.gnbwrap>.closebtn{
+	display:none;
+}
+#header>#header_box>.gnbwrap>#gnb2>ul{
+}
+#header>#header_box>.gnbwrap>#gnb2>ul>li{
+	float:left; margin-right:80px; text-align:center;  line-height:50px;
+}
+#header>#header_box>.gnbwrap>#gnb2>ul>li>a{
+	display:block;  width:100%;  height:100%;  color:#000; font-size:18px; font-weight: bold;
+}
+#header>#header_box>.gnbwrap>#gnb2>ul>li>.sub{
+	position:absolute;   top:60px; font-size: 20px; font-weight: bold;
+	width:1002px;	height:50px; 
+	display:none;
+}
+#header>#header_box>.gnbwrap>#gnb2>ul>li>.sub>li{
+	float:left;   height:50px;  padding:0 15px;  line-height:50px;
+}
+#header>#header_box>.gnbwrap>#gnb2>ul>li>.sub>li>.sub2{
+	height:305px;   width:1002px;   position:absolute;   left:0px;   top:50px;
+	text-align:left ;   text-indent:30px; 
+}
+#header>#header_box>.gnbwrap>#gnb2>ul>li>.sub>li>.sub2>ul{
+	width:220px;   float:left;   margin-right:50px;
+}
+#header>#header_box>.gnbwrap>#gnb2>ul>li>.sub>li>.sub2>ul>li{
+	height:42px;  line-height:42px; font-size: 17px; font-weight: 600;
+}
+
+#header>#header_box>.gnbwrap>#gnb2>ul>li>.sub>li>.sub2>img{
+	float:left;  margin:10px 0 0 20px;
+}
+#header>.sub_bg{
+	width:100%;  height:355px;
+	background:#e5e5e5;
+	display:none;
+}
+#header>.sub_bg>.depth1{
+	width:100%;  height:50px;   background:#f4f4f4;
+}
+#main_container{
+	width:100%;  padding-bottom:50px;
+	margin-top:52px;
+}
+#main_container>#main_visual{
+	width:100%;  max-height:805px;
+	position:relative;
+}
+
+#main_container>#main_visual>#visual_wrap{
+	height:285px;   position:absolute;
+	left:50%;  top:185px;
+	margin-left:-501px;
+	background:#8c8f96;
+}
+#main_container>#main_visual>#visual_wrap>p{
+	font-size:60px;  color:#fff;
+	font-weight:bold;  text-align:center;
+}
+#main_container>#main_visual>#visual_wrap>#btns{
+	background:#463d36;
+	height:91px;
+	margin:0 auto;  float:none;
+	border-left:1px solid #ccc;
+	box-sizing:border-box;
+}
+#main_container>#main_visual>#visual_wrap>#btns>a{
+	display:block;   height:91px;
+	width:33.33333333%;
+	float:left;  text-align:center;
+	color:#fff;   line-height:91px;
+	border:1px solid #ccc;
+	border-left:0px;
+	box-sizing:border-box;
+}
+#main_container>#main_visual>#videowrap{
+	width:100%;
+}
+#main_container>#main_visual>#videowrap>video{
+	width:100%;  height:auto;
+}
+#main_container>#com_info{
+	margin:62px auto 0;
+}
+#main_container>#com_info>h2{
+	text-align:center;
+	font-weight:bold;
+	font-size:44px;
+    color: #fff;
+    position: absolute;
+    z-index:10;
+}
+#main_container>#com_info>#infowrap{
+	margin-top:80px;
+	overflow:hidden;
+}
+#main_container>#com_info>#infowrap>div{
+	height:276px;  position:relative; border-bottom: 2px solid #fff;
+}
+#main_container>#com_info>#infowrap>div:nth-child(3){
+    border-right: 0px;
+}
+#main_container>#com_info>#infowrap>div:last-child{
+    border-right:0px;
+}
+#main_container>#com_info>#infowrap>.info1{
+	background:url(../ikea/images/1.jpg) no-repeat;
+    font-size: 15px;  font-weight: bold; background-size: cover;
+}
+#main_container>#com_info>#infowrap>.info2{
+    background:url(../ikea/images/3.jpg) no-repeat;
+    font-size: 15px;  font-weight: bold;  background-size: cover;
+}
+   
+#main_container>#com_info>#infowrap>.info3{
+    background:url(../ikea/images/evedal.jpg) no-repeat;
+    font-size: 15px;  font-weight: bold;  background-size: cover;
+}
+#main_container>#com_info>#infowrap>.info4{
+	background:url(../ikea/images/baby.jpg) no-repeat;
+    font-size: 15px;  font-weight: bold;  background-size: cover;
+}
+#main_container>#com_info>#infowrap>.info5{
+	background:url(../ikea/images/pinnig.jpg) no-repeat;
+    font-size: 15px;  font-weight: bold; background-size: cover;
+}
+#main_container>#com_info>#infowrap>.info6{
+	background:url(../ikea/images/6.jpg) no-repeat;
+    font-size: 15px;  font-weight: bold; background-size: cover;
+}
+#main_container>#com_info>#infowrap>div>a{
+	position:absolute;  left:0px;  top:0px;
+	width:100%;  height:100%;
+	text-align:center;
+	line-height:276px;
+}
+#main_container>#com_info>#infowrap>div>a:hover{ background: rgba(0,0,0,0.5); }
+#main_container>#com_info>#infowrap>div>a:hover>span{
+	display:block;
+}
+#main_container>#com_info>#infowrap>div>a>.name{
+    position: relative;
+    top:80px;
+    border:none;
+}
+#main_container>#com_info>#infowrap>div>a>span{
+	display:block;  position:absolute;
+	left:10px;  right:10px;  top:10px;  bottom:10px;
+	border:1px solid #555;
+	display:none;
+}
+#main_container>#com_info>#infowrap>div>a>span>strong{
+	display:inline-block;  line-height:14px;
+	padding:8px 15px;
+	border:1px solid #777;
+    color:#fff;  font-weight:none; position: relative; bottom: 30px;
+}
+#main_container>#busi_info{
+	margin:62px auto 0;   width:100%;
+}
+#main_container>#busi_info>h2{
+	font-weight:bold;  font-size:44px;
+	text-align:center;
+}
+#main_container>#busi_info>#busiwrap{
+	width:100%;  height:466px;  margin-top:94px;
+	background:#0f4c82; 
+}
+#main_container>#busi_info>#busiwrap>#busibox{
+	height:424px;  margin:0 auto;
+	position:relative;   padding-top:42px;
+}
+#main_container>#busi_info>#busiwrap>#busibox>.formbox{
+	position:absolute;  top:-50px;  height:95px;
+	background:#fff;   float:none;
+	line-height:90px;   text-indent:90px; border-right: 0px;
+}
+#main_container>#busi_info>#busiwrap>#busibox>.formbox>form{
+	position:absolute;    top:25px;   left:180px;
+	height:40px;    width:770px;
+}
+#main_container>#busi_info>#busiwrap>#busibox>.formbox input{
+	float:left;  width:640px;   height:40px;
+	border:1px solid #ccc;   background:#fff;
+	box-sizing:border-box;
+}
+#main_container>#busi_info>#busiwrap>#busibox>.formbox button{
+	float:left;  width:130px;  height:40px;
+	background:#0f4c82;  border:0px;  color:#fff;
+	font-size:18px;  font-weight:bold;
+}
+#main_container>#busi_info>#busiwrap>#busibox>.busi1{
+	height:424px;  background:url(../ikea/images/today1.jpg) no-repeat;
+	position:relative;  overflow:hidden;
+}
+#main_container>#busi_info>#busiwrap>#busibox>.busi1>div.detailbs{
+	position:absolute;  left:0px;  top:100%;
+	background: rgba(0,0,0,0.5); width:100%;
+	height:100%;   text-align:center
+}
+#main_container>#busi_info>#busiwrap>#busibox>.busi1>div.detailbs>p{
+	color:#fff;    margin:20px 0; font-size: 20px;
+}
+#main_container>#busi_info>#busiwrap>#busibox>.busi1>div.detailbs li a{
+	display:block;   color:#fff; font-size: 16px;
+	width:100%;    padding:4px 0;
+}
+#main_container>#busi_info>#busiwrap>#busibox>.busi1>div.detailbs li a:hover{
+	background:rgba(0,0,0,0.3);
+}
+#main_container>#busi_info>#busiwrap>#busibox>.busi2{
+	height:424px;  background:url(../ikea/images/living.jpg)no-repeat;
+    position:relative;  overflow:hidden;
+}
+#main_container>#busi_info>#busiwrap>#busibox>.busi2>div.detailbs{
+	position:absolute;  left:0px;  top:100%;
+	background: rgba(0,0,0,0.5); width:100%;
+	height:100%;   text-align:center
+}
+#main_container>#busi_info>#busiwrap>#busibox>.busi2>div.detailbs>p{
+	color:#fff;    margin:20px 0; font-size: 20px;
+}
+#main_container>#busi_info>#busiwrap>#busibox>.busi2>div.detailbs li a{
+	display:block;   color:#fff; font-size: 16px;
+	width:100%;    padding:4px 0;
+}
+#main_container>#busi_info>#busiwrap>#busibox>.busi2>div.detailbs li a:hover{
+	background:rgba(0,0,0,0.3);
+}
+#main_container>#busi_info>#busiwrap>#busibox>.busi3{
+	height:424px;  background:url(../ikea/images/frontdoor.jpg)no-repeat;  border-right: 0px;
+    position:relative;  overflow:hidden;
+}
+#main_container>#busi_info>#busiwrap>#busibox>.busi3>div.detailbs{
+	position:absolute;  left:0px;  top:100%;
+	background: rgba(0,0,0,0.5); width:100%;
+	height:100%;   text-align:center
+}
+#main_container>#busi_info>#busiwrap>#busibox>.busi3>div.detailbs>p{
+	color:#fff;    margin:20px 0; font-size: 20px;
+}
+#main_container>#busi_info>#busiwrap>#busibox>.busi3>div.detailbs li a{
+	display:block;   color:#fff; font-size: 16px;
+	width:100%;    padding:4px 0;
+}
+#main_container>#busi_info>#busiwrap>#busibox>.busi3>div.detailbs li a:hover{
+	background:rgba(0,0,0,0.3);
+}
+#main_container>#cs_box{
+	margin:50px auto 0;    overflow: hidden;
+}
+#main_container>#cs_box>div{
+	height:241px;   border-right:1px solid #ccc;
+	box-sizing:border-box; margin-right:0px;
+}
+#main_container>#cs_box>div:first-child{
+	border-left:1px solid #ccc;
+}
+#cs_box>.cs>ul{
+    margin-left: 30px;
+}
+#cs_box>.cs>h2{
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+#cs_box>.cs>ul>li{
+    font-size: 15px;
+    line-height:30px;
+}
+#main_footer{
+	width:100%;  padding:70px 0 60px;
+	background:#0f4c82;  color:#f4f4f4;
+}
+#main_footer>#footer_innerbox{
+    width: 1100px;
+	overflow:hidden;    margin:0 auto;
+}
+#main_footer>.container>.footer_main{
+    border-right: none;
+}
+#main_footer>.container>.col6{
+    border-right: none; line-height: 22px;
+}
+#main_footer>.container>.col3{
+    border-right: none;
+}
+#main_footer>.container>.footer_main>.mh{
+    width: 150px;
+    height: 100px;
+    background: url(../ikea/images/footerlogo.png) no-repeat;
+    background-size: contain;
+    text-indent: -9999em;
+    margin-top:50px;
+}
+#main_footer>.container>.footermenu>ul>li{
+    font-size: 14px;
+}
+#main_footer>.container>.footermenu>ul>li>a{
+    float: left;
+    color: #fff;
+    margin-right: 10px;
+    text-align: center;
+}
+.footersns{
+    width:200px;
+}
+.footersns>ul{
+    
+}
+.footersns>ul>li{
+    float:right;
+    margin-left: 30px;
+}
+#main_footer>.copy{
+    clear:both;
+}
+@media screen and (min-width:1025px){
+
+}
+/*타블렛*/
+@media screen and (max-width:1024px){
+    #header>#header_box{ width: 100%; display: block; }
+	#header>#header_box>#togglebtn{  display:block; }
+	#header>#header_box>#searchbtn{ right:65px;  }
+    #header>#header_box>.gnbwrap>#gnb2>ul>li>a{
+        z-index: 1;
+    }
+	
+	#main_container>#main_visual>#visual_wrap{
+		position:static;  margin:0 auto;
+	}
+	#main_container>#main_visual>#visual_wrap>#btns{
+		display:none;
+	}
+	#main_container>#com_info>h2{
+		color: #000;
+	}
+    #main_container>#busi_info>h2{ position:relative; top: 60px;}
+	#main_container>#busi_info>#busiwrap>#busibox>.formbox>form{
+		position:static;  left:0px;  top:0px;
+		width:100%;   margin-top:20px;
+	}
+	#main_container>#busi_info>#busiwrap>#busibox{
+		padding: 0px;
+	}
+	#main_container>#busi_info>#busiwrap>#busibox>.formbox>span{display: none;}
+	#main_container>#busi_info>#busiwrap>#busibox>.formbox input{  width:75%; }
+	#main_container>#busi_info>#busiwrap>#busibox>.formbox button{ width:25%; }
+	#main_container>#busi_info>#busiwrap>#busibox>.formbox{  top:0px;   left:0px;  position:static; }
+	#main_container>#busi_info>#busiwrap>#busibox>.busi1{  height:320px; }
+	#main_container>#busi_info>#busiwrap>#busibox>.busi2{  height:320px; }
+	#main_container>#busi_info>#busiwrap>#busibox>.busi3{  height:320px; }
+}
+/*모바일*/
+@media screen and (max-width:640px){
+	#video{
+		height: 200px;
+	}
+	.gnbwrap{
+		display: none;
+	}
+	#header>#header_box>#searchbtn{
+		display: none;
+	}
+	#header>#header_box>#togglebtn{
+		background: url(../ikea/images/menu.png) no-repeat; width: 20px; height: 20px;
+		background-size: cover; text-indent: -999em; margin: 20px;
+	}
+	#main_container>#busi_info{
+		padding:0 15px;
+	}
+	#main_container>#busi_info>#busiwrap{
+		background: none;
+		height: 0px;
+	}
+	#main_container>#busi_info>#busiwrap>#busibox{
+		height: 100px;
+	}
+	#main_container>#busi_info>#busiwrap>#busibox>.busi1{
+		display: none;
+	}
+	#main_container>#busi_info>#busiwrap>#busibox>.busi2{
+		display: none;
+	}
+	#main_container>#busi_info>#busiwrap>#busibox>.busi3{
+		display: none;
+	}
+	#header>#header_box>h1{
+		margin-left: 10px;
+	}
+	#main_container>#busi_info>h2{
+		font-size: 5.8vw;
+	}
+	#main_container>#busi_info{
+		padding: 0px;
+		margin: 0px;
+	}
+	#main_container>#com_info>h2{
+		color: #000;
+		font-size: 5.8vw;
+	}
+	#main_container>#com_info>#infowrap{
+		margin-top: 40px;
+	}
+
+	#main_container>#cs_box>div{
+		width:50%;  border:1px solid #ccc;
+		border-left:0px;  border-top:0px;
+		box-sizing: border-box;
+	}
+	#main_container>#cs_box{
+		border-left:1px solid #ccc;
+		border-top:1px solid #ccc;
+		box-sizing: border-box;
+	}
+	
+	#main_container>#com_info>#infowrap>.info1{
+		width:100%;
+		background-size: cover;
+	}
+	#main_container>#com_info>#infowrap>.info2{
+		width:50%; margin: 0px; height: 180px;
+	}
+	#main_container>#com_info>#infowrap>.info3{
+		width:50%;  float:right; margin: 0px; height: 180px;
+	}
+	#main_container>#com_info>#infowrap>.info4{
+		width:50%;  margin: 0px; height: 180px;
+	}
+	#main_container>#com_info>#infowrap>.info5{
+		width:50%; float:right; margin: 0px; height: 180px;
+	}
+	#main_container>#com_info>#infowrap>.info6{
+		width: 100%; margin: 0px; height: 180px;
+	}
+	#main_footer{  padding-top:0px; }
+	#main_footer>#footer_innerbox>.footer_main{
+		float:none;   width:100%;  overflow:hidden;
+		margin-bottom:15px;   border-bottom:1px solid #ccc;
+	}
+	#main_footer>#footer_innerbox>.footer_main ul{
+		margin:10px 0;   overflow:hidden;
+	}
+	#main_footer>#footer_innerbox>.footer_main li{
+		float:left;  width:50%;  height:20px;  text-align:center;  line-height:20px;
+	}
+	#main_footer>#footer_innerbox>.footer_main li:first-child{
+		border-right:1px solid #ccc;   box-sizing:border-box;
+	}
+	#main_footer>#footer_innerbox>.footer_main .last{ display:none; }
+	#main_footer>#footer_innerbox>.footerbtns{
+		float:none;   width:100%;  text-align:center;
+	}
+	#main_footer>#footer_innerbox>.footerbtns .sns li{  display:inline;    font-size:20px;   }
+	#main_footer>#footer_innerbox>.footerbtns .sns li a{		color:#fff;		}
+	#main_footer>#footer_innerbox>.footerbtns .sns{ overflow:hidden;  }
+	#main_container>#com_info>#infowrap>div>a{
+		line-height:150px;
+	}
+}

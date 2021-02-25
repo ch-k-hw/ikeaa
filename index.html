@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<link rel="apple-touch-icon" sizes="72x72" href="chry_img/icon_72.png">
+ 	<link rel="apple-touch-icon" sizes="114x114" href="chry_img/icon_114.png">
+  	<link rel="shortcut icon" href="chry_img/icon_72.png">
+	<!-- 반응형 / 모바일 -->
+	<script type="text/javascript" src="js/css3-mediaqueries.js"></script>
+	<script type="text/javascript" src="js/html5shiv.min.js"></script>
+	<title>ikea</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.js"></script>
+    	<script type="text/javascript">
+    	<!--
+	function setCookie( name, value, expiredays ) {
+    		var todayDate = new Date();
+       	todayDate.setDate( todayDate.getDate() + expiredays );
+        	document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+   	 }
+	function closeWin() {
+    		if ( document.notice_form.popchk.checked ){
+        		setCookie( "mainPop", "done" , 1 );
+    		}
+    		document.all['popup'].style.display = "none";
+	}
+	//-->
+	</script>
+	<script type="text/javascript">
+	$(function(){
+		$('#gnb2>ul>li').on('mouseenter',function(){
+			$(this).find('.sub').show();
+			$('.sub_bg').show();
+		});
+		$('#gnb2>ul>li>.sub>li>a').on('mouseenter',function(){
+			$('.sub .sub2:visible').hide();
+			$(this).next('.sub2').show();
+		});
+		$('#gnb2').on('mouseleave',function(){
+			$('.sub').hide();
+			$('.sub_bg').hide();
+		});
+		$('#busibox>[class*=busi]').on('mouseenter',function(){
+			$(this).find('.detailbs').animate({top:'0px'},400);
+		});
+		$('#busibox>[class*=busi]').on('mouseleave',function(){
+			$(this).find('.detailbs').animate({top:'100%'},400);
+		});
+	})
+	</script>
+</head>
+<body>
+<!-- 팝업창 레이어 -->
+<div id="popup">
+	<a href="#"><img src="images/popup.jpg" alt=""></a>
+	<div class="popfooter">
+		<form name="notice_form" action="#" method="get">
+			<input type="checkbox" id="popchk" ><label for="popchk">오늘하루 열지않기</label>
+			<a href="javascript:closeWin();" class="btn_pop_close">닫기</a>
+		</form>
+	</div>
+	<script type="text/javascript">
+		/*function getCookie(name){
+			var nameOfCookie = name + "=";
+			var x = 0;
+			while (x <= document.cookie.length){
+				var y = (x + nameOfCookie.length);
+				if (document.cookie.substring(x, y) == nameOfCookie){
+				if ((endOfCookie = document.cookie.indexOf(";", y)) == -1){
+					endOfCookie = document.cookie.length;
+				}
+				return unescape (document.cookie.substring(y, endOfCookie));
+				}
+				x = document.cookie.indexOf (" ", x) + 1;
+				if (x == 0) break;
+			}
+			return "";
+		}
+		if (getCookie("mainPop") != "done"){
+			var popUrl = "./event/pevent.php"; //팝업창에 출력될 페이지 URL
+			var popOption = "width=370, height=360, resizable=no, scrollbars=no, status=no;";    //팝업창 옵션(optoin)
+			window.open(popUrl,"",popOption);
+		}*/
+		cookiedata = document.cookie;
+		if ( cookiedata.indexOf("maindiv=done") < 0 ){
+    			document.all['popup'].style.display = "block";
+    		} else {
+        		document.all['popup'].style.display = "none";
+		}
+	</script>
+</div>
+<!-- 팝업창 레이어 -->
+	<header id="header">
+		<div id="header_box" class="container">
+			<h1><a href="#"><img src="images/mainlogo.png" alt="Logo"></a></h1>
+			<button type="button" id="togglebtn">toggle</button>
+			<div class="gnbwrap">
+				<nav id="gnb1"></nav>
+				<nav id="gnb2">
+					<ul>
+						<li>
+							<a href="#">모든 제품</a>
+							<ul class="sub">
+								<li>
+									<a href="#">가구</a>
+									<div class="sub2">
+										<ul>
+											<li><a href="#">식탁/책상</a></li>
+											<li><a href="#">책장/선반유닛</a></li>
+											<li><a href="#">서랍</a></li>
+											<li><a href="#">의자</a></li>
+											<li><a href="#">바테이블/의자</a></li>
+											<li><a href="#">카페가구</a></li>
+                                            <li><a href="#">이동식 카트</a></li>
+										</ul>
+										<a href="#"><img src="images/Catalog.jpg" alt=""></a>
+										<a href="#"><img src="images/ikeafood.jpg" alt=""></a>
+									</div>
+								</li>
+								<li><a href="#">소파&amp;암체어</a></li>
+								<li><a href="#">침대&amp;메트리스</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">디지털 쇼룸</a>
+							<ul class="sub">
+								<li>
+									<a href="#">침실</a>
+									<div class="sub2">
+										<ul>
+											<li><a href="#">침대</a></li>
+											<li><a href="#">책상</a></li>
+											<li><a href="#">책장/선반유닛</a></li>
+											<li><a href="#">서랍</a></li>
+											<li><a href="#">의자</a></li>
+											<li><a href="#">바테이블/의자</a></li>
+											<li><a href="#">카페가구</a></li>
+										</ul>
+										<a href="#"><img src="images/Catalog.jpg" alt=""></a>
+										<a href="#"><img src="imagesikeafood.jpg" alt=""></a>
+									</div>
+								</li>
+								<li><a href="#">거실</a></li>
+								<li><a href="#">주방</a></li>
+								<li><a href="#">다이닝</a></li>
+								<li><a href="#">어린이</a></li>
+								<li><a href="#">욕실</a></li>
+								<li><a href="#">홈오피스</a></li>
+							</ul>
+						</li>
+						<li>
+					        <a href="#">아이디어</a>
+					    </li>
+						<li>
+					        <a href="#">매장 안내</a>
+					    </li>
+					</ul>
+					
+				</nav>
+				<a href="#" class="closebtn">close</a>
+			</div>
+			<button type="button" id="searchbtn">search</button>
+		</div>
+		<div class="sub_bg">
+			<div class="depth1"></div><div class="depth2"></div>
+		</div>
+	</header>
+	<div id="main_container"><!-- w:100% -->
+		<div id="main_visual"><!-- w:100% -->
+			<div id="videowrap">
+				<video autoplay muted loop id="video">
+					<source src="ikea.mp4" type="video/mp4">
+					<source src="bg.ogv" type="video/ogv">
+					<source src="bg.webm" type="video/webm">
+				</video>
+			</div>
+		</div>
+		<div id="com_info" class="container">
+			<h2>이달의 인기제품</h2>
+			<div id="infowrap" class="container">
+				<div class="col6 info1">
+					<a href="#">
+					    <span class="name"><strong>HKIVIK 쉬비크 3인용 쇼파</strong></span>
+						<span><strong>자세히보기</strong></span>
+					</a>
+				</div>
+				<div class="col3 info2"> 
+				<a href="#">
+					    <span class="name"><strong>INSJÖN 인셴</strong></span>
+						<span><strong>자세히보기</strong></span>
+					</a>
+				</div>
+				<div class="col3 info3"> 
+				<a href="#">
+					    <span class="name"><strong>EVEDAL 에베달 펜던트등</strong></span>
+						<span><strong>자세히보기</strong></span>
+					</a>
+				</div>
+				<div class="col3 info4"> 
+				<a href="#">
+					    <span class="name"><strong>ODGER 오드게르 의자 </strong></span>
+						<span><strong>자세히보기</strong></span>
+					</a>
+				</div>
+				<div class="col3 info5">
+				<a href="#">
+					    <span class="name"><strong> PINNIG 핀니그 걸이</strong></span>
+						<span><strong>자세히보기</strong></span>
+					</a> 
+				</div>
+				<div class="col6 info6"> 
+				<a href="#">
+					    <span class="name"><strong> SONGESAND 송에산드 침대프레임+수납상자2 </strong></span>
+						<span><strong>자세히보기</strong></span>
+					</a> 
+				
+				</div>
+			</div>
+		</div>
+		<div id="busi_info">
+			<h2>오늘의 공간</h2>
+			<div id="busiwrap">
+				<div id="busibox" class="container colm10">
+					<div class="col12 formbox"><span>검색</span>
+						<form action="search.php" method="get">
+							<input type="text" id="searchtext" name="searchtext" placeholder="키워드를 입력해주세요">
+							<button type="button" id="searchbt">검색</button>
+						</form>
+					</div>
+					<div class="col4 busi1">
+						<div class="detailbs">
+							<p>침실</p>
+							<ul>
+								<li><a href="#">프레임</a></li><li><a href="#">침구</a></li><li><a href="#">매트리스</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col4 busi2">
+					    <div class="detailbs">
+							<p>거실</p>
+							<ul>
+								<li><a href="#">쇼파</a></li><li><a href="#">테이블</a></li><li><a href="#">선반</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col4 busi3">
+					<div class="detailbs">
+							<p>현관</p>
+							<ul>
+								<li><a href="#">수납</a></li><li><a href="#">전신거울</a></li><li><a href="#">후크</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="cs_box" class="container colm10">
+			<div class="col3 cs">
+			<h2><a href="#">고객지원</a></h2>
+			<ul>
+			    <li>자주 묻는 질문</li>
+			    <li>문의하기</li>
+			    <li>배송조회</li>
+			    <li>반품정책</li>
+			    <li>품질보증</li>
+			</ul>
+			</div>
+			<div class="col3 cs">
+			<h2><a href="#">쇼핑하기</a></h2>
+			<ul>
+			    <li>쇼핑하기</li>
+			    <li>전화주문</li>
+			    <li>IKEA 모바일 앱</li>
+			    <li>IKEA 카탈로그</li>
+			    <li>제품 재고 확인</li>
+			</ul>
+			</div>
+			<div class="col3 cs">
+			<h2><a href="#">서비스</a></h2>
+			<ul>
+                <li>IKEA 서비스</li>
+                <li>배송 서비스</li>
+                <li>조립 서비스</li>
+                <li>컨설팅 서비스</li>
+			</ul>
+			</div>
+			<div class="col3 cs">
+			<h2><a href="#">IKEA 이야기</a></h2>
+			<ul>
+			    <li>기업 소개</li>
+			    <li>데모크래틱 디자인</li>
+			    <li>지속가능한 생활</li>
+			    <li>뉴스</li>
+			    <li>채용정보</li>
+			</ul>
+			</div>
+		</div>
+	</div>
+	<footer id="main_footer">
+		<div id="footer_innerbox" class="container">
+			<div class="col3 footer_main">
+				<p class="mh"> 하단로고 </p>
+			</div>
+			<div class="col6 footermenu mh" >
+				<ul>
+				<li class="top"><a href="#">개인정보취급방침</a></li>
+					<li class="top"><a href="#">이용약관</a></li>
+					<li class="top"><a href="#">사이트맵</a></li>
+					<li>IKEA 코리아</li><!-- 50% w-->
+					<li>주소 : (우) 14352 경기도 광명시 일직로 17 IKEA광명점</li><!-- 50% w-->
+					<li>사업자 등록번호 : 106-86-82871</li>
+					<li>대표자 : 프레드리크 요한손</li>
+					<li>통신판매업 신고 : 2018-경기광명-0209</li>
+					<li>TEL : 1670-4532</li>
+					<li>© Inter IKEA Systems B.V 1999-2020</li>
+				</ul>
+			</div>
+			<div class="col3 footersns">
+				<ul>
+					<li><a href="#"><img src="images/facebook.png" alt=""></a></li>
+					<li><a href="#"><img src="images/twiter.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/instargram.png" alt=""></a></li>
+                </ul>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
